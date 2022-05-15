@@ -1,6 +1,13 @@
 import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
+  styles: {
+    global: {
+      p: {
+        mb: "0.8rem",
+      },
+    },
+  },
   fonts: {
     heading: "DM Sans, sans-serif",
     body: "DM Sans, sans-serif",

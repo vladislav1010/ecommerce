@@ -1,7 +1,9 @@
+import { Footer } from "landing-ui";
+
 export default function Web() {
   return (
     <div>
-      <h1>Web</h1>
+      <Footer />
     </div>
   );
 }
