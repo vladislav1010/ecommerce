@@ -1,4 +1,7 @@
-const withTM = require("next-transpile-modules")(["ui", "theme"]);
+const withTM = require("next-transpile-modules")([
+  "landing-ui",
+  "landing-theme",
+]);
 
 module.exports = withTM({
   reactStrictMode: true,
