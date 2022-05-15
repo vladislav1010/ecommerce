@@ -9,7 +9,8 @@ export default function Document() {
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
-          crossOrigin={true as any}
+          // https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin
+          crossOrigin={"anonymous"}
         />
         <link href={googleFontsUrl} rel="stylesheet" />
       </Head>
