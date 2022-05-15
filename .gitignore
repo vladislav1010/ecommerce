@@ -31,3 +31,7 @@ yarn-error.log*
 
 # turbo
 .turbo
+
+# vs code exts
+.lh
+newrelic_agent.log
