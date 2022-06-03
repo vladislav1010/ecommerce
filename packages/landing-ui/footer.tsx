@@ -157,6 +157,7 @@ function Footer() {
           mt={{ base: "15px", md: 0 }}
         >
           <LinksColumn
+            key="1"
             {...linksColumnProps}
             title="Platform"
             items={[
@@ -168,6 +169,7 @@ function Footer() {
             ]}
           />
           <LinksColumn
+            key="2"
             {...linksColumnProps}
             title="Platform"
             items={[
@@ -181,6 +183,7 @@ function Footer() {
             ]}
           />
           <LinksColumn
+            key="3"
             {...linksColumnProps}
             title="Platform"
             items={[{ to: "/how-it-works-for-talent", title: "About" }]}
