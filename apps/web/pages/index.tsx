@@ -1,8 +1,9 @@
-import { Footer } from "landing-ui";
+import { DownloadGuide, Footer } from "landing-ui";
 
 export default function Web() {
   return (
     <div>
+      <DownloadGuide />
       <Footer />
     </div>
   );

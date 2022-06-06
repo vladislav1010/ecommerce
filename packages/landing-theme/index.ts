@@ -1,4 +1,9 @@
 import { extendTheme } from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
+
+type Dict = Record<string, any>;
+
+const buttonSizesStyleBase = { borderRadius: "full" };
 
 const theme = extendTheme({
   styles: {
@@ -52,6 +57,7 @@ const theme = extendTheme({
   },
   fontSizes: {
     sm: "0.875rem",
+    lg: "1.125rem",
     xl: "1.25rem",
     "2xl": "1.4375rem",
     "3xl": "1.75rem",
@@ -84,6 +90,50 @@ const theme = extendTheme({
       letterSpacing: "normal",
       lineHeight: "short",
       fontSize: "1.5rem",
+    },
+  },
+  components: {
+    Button: {
+      sizes: {
+        lg: {
+          ...buttonSizesStyleBase,
+          py: "12px",
+          px: "24px",
+          h: "auto",
+          fontSize: "lg",
+        },
+      },
+      variants: {
+        outline: (props: Dict) => {
+          const { colorScheme: c, theme } = props;
+
+          if (c === "black") {
+            const hoverActiveStyle = {
+              color: mode(
+                theme.colors.base.pureWhite,
+                theme.colors.base.pureWhite
+              )(props),
+              bg: mode(theme.colors.base.black, theme.colors.base.black)(props),
+            } as const;
+
+            return {
+              color: mode(
+                theme.colors.base.black,
+                theme.colors.base.black
+              )(props),
+              borderWidth: "2px",
+              borderColor: mode(
+                theme.colors.base.black,
+                theme.colors.base.black
+              )(props),
+              _hover: hoverActiveStyle,
+              _active: hoverActiveStyle,
+            };
+          }
+
+          return {};
+        },
+      },
     },
   },
 });
