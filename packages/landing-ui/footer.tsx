@@ -81,7 +81,7 @@ function SocialIcon({ icon, href }: { icon: React.ReactNode; href: string }) {
 // Можно было извлечь layout в отдельные компоненты
 // Но это не нужно, т.к. достаточно отчетливо видно, какие элементы что делают
 // Где flex container, children, hypothetical size, ...
-// Как и какие свойства css взаимодействуюь, чтобы получить желаемое поведение
+// Как и какие свойства css взаимодействуют, чтобы получить желаемое поведение
 function Footer() {
   const linksColumnProps: BoxProps = {
     flex: "0 0 auto",
@@ -188,7 +188,7 @@ function Footer() {
         </Flex>
       </Flex>
       <Box>
-        {/* a4 Смотрю обзор CSS. Цвет встречается на странице единажды - one-off */}
+        {/* a4 Смотрю обзор CSS. Цвет встречается на странице единожды - one-off */}
         <Text color="#444444" fontSize="10px">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel cursus dolor. Quisque tincidunt vestibulum urna, at pretium ligula pellentesque ac. Praesent sit amet diam ut felis semper pretium quis ac nulla. Aenean molestie libero arcu, non lobortis nibh suscipit nec. Curabitur ut est ac elit varius semper sit amet sit amet metus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut faucibus sapien at metus molestie efficitur. Phasellus in nisl blandit, egestas mauris ac, sagittis tortor. Duis bibendum arcu a lectus iaculis aliquam. Ut venenatis lectus eget felis dapibus, a viverra lacus malesuada.
         </Text>
