@@ -2,11 +2,14 @@ import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   styles: {
-    global: {
+    global: (props: Record<string, any>) => ({
       p: {
         mb: "0.8rem",
       },
-    },
+      body: {
+        color: props.theme.colors.base.black,
+      },
+    }),
   },
   fonts: {
     heading: "DM Sans, sans-serif",
@@ -14,7 +17,7 @@ const theme = extendTheme({
   },
   colors: {
     base: {
-      black: "#141417",
+      black: "#0e0e11",
       pureWhite: "#ffffff",
       offWhite: "#faf9f8",
       softBlue: "#f5f8ff",
@@ -56,10 +59,6 @@ const theme = extendTheme({
     "4xl": "2.25rem",
     "5xl": "3.375rem",
   },
-  fontWeights: {
-    normal: 400,
-    medium: 500,
-  },
   textStyles: {
     headline: {
       fontSize: ["4xl", "4xl", "5xl"],
@@ -79,6 +78,12 @@ const theme = extendTheme({
       // one-off
       // https://github.com/kentcdodds/bookshelf/blob/exercises/02-styles/INSTRUCTIONS.md
       lineHeight: [1.714, 1.714, "tall"],
+    },
+    h5: {
+      fontWeight: "medium",
+      letterSpacing: "normal",
+      lineHeight: "short",
+      fontSize: "1.5rem",
     },
   },
 });
